@@ -1,1 +1,4 @@
-script: find . -print
+install:
+  - sudo apt-get graphviz
+script: bash type -a -path dot
+
