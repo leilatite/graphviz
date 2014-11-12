@@ -2,5 +2,7 @@
 SHELL = /bin/bash
 
 default:
-	echo OK
+	type -a -path dot
+
+
 
