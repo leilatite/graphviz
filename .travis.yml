@@ -1,9 +1,6 @@
 install:
 - sudo apt-get --verbose-versions update
-- curl -o libgraphviz.deb http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub12.04/x86_64/libgraphviz4_2.38.0-1~precise_amd64.deb
-- sudo dpkg -i libgraphviz.deb
-- curl -o graphviz.deb http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub12.04/x86_64/graphviz_2.38.0-1~precise_amd64.deb
-- sudo dpkg -i graphviz.deb
+- sudo apt-get --verbose-versions install graphviz
 script: make
 deploy:
   provider: releases
