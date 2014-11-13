@@ -1,0 +1,61 @@
+graph graphics {
+  size="10,10";
+  edge [fontname = "Verdana", fontsize=10, dir = forward, nodesep=1 ];
+  node [fontname = "Verdana", fontsize=10, width = 0, height = 0, shape=box, style=rounded ];
+  graph [layout=dot, rankdir="TB"];
+
+  node [shape=none, width=0, height=0, margin=0];
+
+  "structures:ObjectType" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"
+    HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetType.iepd?typeKey=nv-1je"
+>
+<TR><TD COLSPAN="2"><B>structures:ObjectType</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT">@structures:id: xs:ID [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT">@structures:ref: xs:IDREF [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT">@structures:metadata: xs:IDREFS [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT">@structures:relationshipMetadaa: xs:IDREFS [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT">structures:ObjectAugmentationPoint [0..1]</TD></TR>
+</TABLE>>];
+
+  "nc:PersonType" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0"
+  >
+<TR><TD HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetType.iepd?typeKey=nv-6y"><B>nc:PersonType</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" 
+	HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetProperty.iepd?propertyKey=nv-1pe">nc:PersonAccentText: nc:TextType [0..n]</TD></TR>
+<TR><TD ALIGN="LEFT"
+	HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetProperty.iepd?propertyKey=nv-11d"
+	>nc:PersonAgeDescriptionText: nc:TextType [0..n]</TD></TR>
+<TR><TD ALIGN="LEFT" HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetProperty.iepd?propertyKey=nv-11e"
+	>nc:PersonAgeMeasure: nc:MeasureType [0..n]</TD></TR>
+<TR><TD ALIGN="LEFT"
+	HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetProperty.iepd?propertyKey=nv-11r"
+	>nc:PersonBirthDate: nc:DateType [0..n]</TD></TR>
+<TR><TD ALIGN="CENTER" HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetType.iepd?typeKey=nv-6y"><I>...more...</I></TD></TR>
+<TR><TD ALIGN="LEFT" HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetProperty.iepd?propertyKey=nv-11u5">nc:PersonAugmentationPoint [0..n]</TD></TR>
+</TABLE>>];
+
+  "it:RepresentativePersonType" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0" HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetType.iepd?typeKey=nv-5ww">
+<TR><TD><B>it:RepresentativePersonType</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="CENTER"><I>...more...</I></TD></TR>
+</TABLE>>];
+
+  "j:MedicalPractitionerType" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0" HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetType.iepd?typeKey=nv-f0s">
+<TR><TD><B>j:MedicalPractitionerType</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="CENTER"><I>...more...</I></TD></TR>
+</TABLE>>];
+
+  edge [dir=back, label="base type"];
+
+  "structures:ObjectType" -- "nc:PersonType";
+
+
+  "nc:PersonType" -- "it:RepresentativePersonType";
+  "nc:PersonType" -- "j:MedicalPractitionerType";
+
+
+  
+}

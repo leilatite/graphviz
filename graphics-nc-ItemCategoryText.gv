@@ -1,0 +1,30 @@
+graph graphics {
+  size="10,10";
+  edge [fontname = "Verdana", fontsize=10, dir = forward, nodesep=1 ];
+  node [fontname = "Verdana", fontsize=10, width = 0, height = 0, shape=box, style=rounded ];
+  graph [layout=dot, rankdir="TB"];
+
+  node [shape=box, style=rounded]
+
+  "nc:ItemCategoryText" [URL="http://tools.niem.gov/niemtools/ssgt/SSGT-GetProperty.iepd?propertyKey=nv-189"];
+  "nc:ItemCategory" [URL="http://tools.niem.gov/niemtools/ssgt/SSGT-GetProperty.iepd?propertyKey=nv-188"];
+
+  node [shape=none, width=0, height=0, margin=0];
+
+  "nc:TextType" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="0" HREF="http://tools.niem.gov/niemtools/ssgt/SSGT-GetType.iepd?typeKey=nv-8v">
+<TR><TD><B>nc:TextType</B></TD></TR>
+<HR/>
+<TR><TD ALIGN="CENTER"><I>...more...</I></TD></TR>
+</TABLE>>];
+  
+  "nc:ItemCategoryText";
+  "nc:ItemCategory";
+  "nc:TextType";
+
+  "nc:ItemCategory" -- "nc:ItemCategoryText" [label="substitutionGroup", dir=back];
+
+  { rank = same; "nc:ItemCategoryText"; "nc:TextType"; }
+
+  "nc:ItemCategoryText" -- "nc:TextType" [label="type"];
+  
+}
