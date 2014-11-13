@@ -1,6 +1,11 @@
 install:
 - sudo apt-get --verbose-versions update
-- sudo apt-get --verbose-versions install graphviz
+- sudo apt-get --verbose-versions dist-upgrade
+- sudo apt-get --verbose-versions remove libxdot4
+- curl -o libgraphviz.deb http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub12.04/x86_64/libgraphviz4_2.38.0-1~precise_amd64.deb
+- sudo dpkg -i libgraphviz.deb
+- curl -o graphviz.deb http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub12.04/x86_64/graphviz_2.38.0-1~precise_amd64.deb
+- sudo dpkg -i graphviz.deb
 script: make
 deploy:
   provider: releases
