@@ -1,5 +1,12 @@
 install:
-  - sudo apt-get --verbose install graphviz
-  - git clone --depth 1 git://git.savannah.gnu.org/config.git config
-  - config/config.guess
+- sudo apt-get --verbose install graphviz
+- git clone --depth 1 git://git.savannah.gnu.org/config.git config
+- config/config.guess
 script: make
+deploy:
+  provider: releases
+  api_key:
+    secure: COmIr4OXZcI2WV15+TLx4+VrIC7v9uen/aKG+W1dq8GgXVBWu9NYXxnPowDaUNd04IcZwvzNK4uBW7YW2q9WFO6yUHnlbsFM33fB8UTVONNcKL+mZl+pnFZqLZbxdA5NFXwb0crcfMu5bZKKo/llh3RhVJhthxSSLW2e4MwprXc=
+  file: out/*
+  on:
+    repo: webb/graphviz
