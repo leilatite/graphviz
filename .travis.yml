@@ -1,3 +1,4 @@
+language: c
 install:
 - sudo apt-get --verbose-versions update
 - sudo apt-get --verbose-versions remove libxdot4 libgvc5 libgraph4
@@ -12,5 +13,7 @@ deploy:
     secure: COmIr4OXZcI2WV15+TLx4+VrIC7v9uen/aKG+W1dq8GgXVBWu9NYXxnPowDaUNd04IcZwvzNK4uBW7YW2q9WFO6yUHnlbsFM33fB8UTVONNcKL+mZl+pnFZqLZbxdA5NFXwb0crcfMu5bZKKo/llh3RhVJhthxSSLW2e4MwprXc=
   file_glob: true
   file: out/*
-New-1  on:
+  on:
     repo: webb/graphviz
+notifications:
+  email: true
