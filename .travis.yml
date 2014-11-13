@@ -7,6 +7,7 @@ deploy:
   provider: releases
   api_key:
     secure: COmIr4OXZcI2WV15+TLx4+VrIC7v9uen/aKG+W1dq8GgXVBWu9NYXxnPowDaUNd04IcZwvzNK4uBW7YW2q9WFO6yUHnlbsFM33fB8UTVONNcKL+mZl+pnFZqLZbxdA5NFXwb0crcfMu5bZKKo/llh3RhVJhthxSSLW2e4MwprXc=
+  file_glob: true
   file: out/*
   on:
     repo: webb/graphviz
