@@ -14,7 +14,7 @@ graph graphics {
 <TR><TD ALIGN="LEFT">@structures:id: xs:ID [0..1]</TD></TR>
 <TR><TD ALIGN="LEFT">@structures:ref: xs:IDREF [0..1]</TD></TR>
 <TR><TD ALIGN="LEFT">@structures:metadata: xs:IDREFS [0..1]</TD></TR>
-<TR><TD ALIGN="LEFT">@structures:relationshipMetadaa: xs:IDREFS [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT">@structures:relationshipMetadata: xs:IDREFS [0..1]</TD></TR>
 <TR><TD ALIGN="LEFT">structures:ObjectAugmentationPoint [0..1]</TD></TR>
 </TABLE>>];
 
