@@ -8,7 +8,8 @@ default: first $(ALL_HTML)
 
 .PHONY: first
 first:
-	@ mkdir -p out tmp
+	type -a -path dot
+	mkdir -p out tmp
 
 out/%.html: tmp/%.map tmp/%.svg.base64 generic.html.m4
 	/opt/local/bin/gm4 -P -DM_NAME=$* generic.html.m4 > $@

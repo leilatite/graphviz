@@ -1,7 +1,6 @@
 install:
-- sudo apt-get --verbose-versions install graphviz
-- git clone --depth 1 git://git.savannah.gnu.org/config.git config
-- config/config.guess
+- curl -o graphviz.deb http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub12.04/x86_64/graphviz_2.38.0-1~precise_amd64.deb
+- sudo dpkg -i graphviz.deb
 script: make
 deploy:
   provider: releases
