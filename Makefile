@@ -12,7 +12,7 @@ first:
 	mkdir -p out tmp
 
 out/%.html: tmp/%.map tmp/%.svg.base64 generic.html.m4
-	/opt/local/bin/gm4 -P -DM_NAME=$* generic.html.m4 > $@
+	m4 -P -DM_NAME=$* generic.html.m4 > $@
 
 tmp/%.map: tmp/%.map.orig map.sed
 	sed -f map.sed $< > $@
