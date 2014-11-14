@@ -1,6 +1,6 @@
 
 ifndef PACKAGE_NAME
-PACKAGE_NAME = graphics
+PACKAGE_NAME = graphviz
 endif
 
 ifdef TRAVIS_TAG

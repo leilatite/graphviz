@@ -1,5 +1,5 @@
 language: c
-env: PACKAGE_NAME=xsd-graphics
+env: PACKAGE_NAME=graphviz
 install:
 - sudo apt-get --verbose-versions update
 - sudo apt-get --verbose-versions remove libxdot4 libgvc5 libgraph4 libcgraph5 libcdt4 libpathplan4
