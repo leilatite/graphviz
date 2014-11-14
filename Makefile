@@ -1,5 +1,9 @@
 
+ifdef TRAVIS_TAG
+RESULTS_NAME = graphviz-$(TRAVIS_TAG)
+else
 RESULTS_NAME = graphviz
+endif
 
 SHELL = /bin/bash
 ALL_GV = $(wildcard *.gv)
