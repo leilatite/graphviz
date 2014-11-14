@@ -1,8 +1,12 @@
 
+ifndef PACKAGE_NAME
+PACKAGE_NAME = graphics
+endif
+
 ifdef TRAVIS_TAG
-RESULTS_NAME = graphviz-$(TRAVIS_TAG)
+RESULTS_NAME = $(PACKAGE_NAME)-$(TRAVIS_TAG)
 else
-RESULTS_NAME = graphviz
+RESULTS_NAME = $(PACKAGE_NAME)
 endif
 
 SHELL = /bin/bash
