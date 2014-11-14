@@ -8,13 +8,10 @@ ZIP = tmp/$(RESULTS_NAME).zip
 
 .PHONY: default
 default: first $(ZIP)
-	@ printf 'begin========================\n'
-	@ set
-	@ printf 'end========================\n'
 
 .PHONY: first
 first:
-	mkdir -p out tmp/$(RESULTS_NAME)
+	mkdir -p tmp/$(RESULTS_NAME)
 
 tmp/$(RESULTS_NAME)/%.html: tmp/%.map tmp/%.svg.base64 generic.html.m4
 	m4 -P -DM_NAME=$* generic.html.m4 > $@
