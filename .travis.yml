@@ -15,7 +15,7 @@ deploy:
   provider: releases
   api_key:
     secure: FyKasR5GdjYdr9mR72YWJkpgXrbinWZvkgzCQEgnrbm/Y8a5mPte2yxMZkRkxpXg10gnjiHan8V4bmiMdOlHMfVdzckm9UApeDhz1mEobFWjwq3yMdy+Z522fPH6Jx+etlNmiQ9XbSIP9yc1jyUbfc1E3WLdKkJnaAfgOAwIue8=
-  file: ${PACKAGE_NAME}-${TRAVIS_TAG}.zip
+  file: tmp/${PACKAGE_NAME}-${TRAVIS_TAG}.zip
   on:
     repo: webb/graphviz
     all_branches: true
